@@ -3,7 +3,7 @@ import fetch_token from './fetch_token.js';
 import fetch_calendar from './inform.js';
 
 const App = () => {
-  const username = "test10"; //test name
+  const username = "test23"; //test name
   const team = "김천"; // test team
   const [token, setToken] = useState('');  //token
   const [Local_token, setLocalToken] = useState(localStorage.getItem('token') || '');
@@ -48,7 +48,13 @@ const App = () => {
       <p>Token: {token}</p>
 
       <h3>Information</h3>
-      <p>Calendar Data: {calendarData ? JSON.stringify(calendarData) : 'Loading...'}</p>
+      <p>
+      {/* {calendarData.map((author, index) => (
+            <li key={index}>{author}</li>
+          ))} */}
+          {<p>
+            {calendarData ? JSON.stringify(calendarData) : 'Loading...'}</p>}
+      </p>
     </div>
   );
 };

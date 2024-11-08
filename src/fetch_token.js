@@ -1,5 +1,6 @@
 async function fetch_token(username, team) {
     const url = `http://220.88.39.23:5000/api/user/token?username=${encodeURIComponent(username)}&team=${encodeURIComponent(team)}`;
+    //const url = `http://127.0.0.1:5000/api/user/token?username=${encodeURIComponent(username)}//&team=${encodeURIComponent(team)}`;
 
     try {
         const response = await fetch(url);
